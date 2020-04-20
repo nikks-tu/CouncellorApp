@@ -1,0 +1,7 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/selection_animation"
+    android:oneshot="true">
+    <item android:drawable="@drawable/single_tick" android:duration="2000" />
+    <item android:drawable="@drawable/double_tick_seen" android:duration="10000" />
+
+</animation-list>

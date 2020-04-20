@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:id="@+id/viewline"
+                android:background="#f5f7f5"
+                android:padding="@dimen/margin_five">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_above="@id/viewline"
+                    android:background="@android:color/black"
+                    android:visibility="gone"/>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/ll_announcement"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onClickButton">
+
+                    <ImageView
+                        android:id="@+id/imgPublicPoll"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/announcegrya" />
+                    <TextView
+                        android:id="@+id/anouncetext_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Announcements"
+                        android:textColor="@color/grey_color_text"
+                        android:textSize="12sp"
+                        android:fontFamily="@string/font_sand_regular"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/ll_department_poll"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:onClick="onClickButton">
+
+                    <ImageView
+                        android:id="@+id/imgUserPoll"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/userpollgray" />
+
+                    <TextView
+                        android:id="@+id/userpolltext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Polls"
+                        android:textColor="#aeb8ae"
+                        android:textSize="12sp"
+                        android:fontFamily="@string/font_sand_regular" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <ImageView
+                android:id="@+id/imgChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:clickable="true"
+                android:onClick="onClickButton"
+                android:src="@drawable/ic_chats" />
+
+
+
+            <TextView
+                android:id="@+id/user_poll_unseen_count_private_poll"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/circular_text_view"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/admin_poll_count"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="34dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginStart="38dp"
+                android:background="@drawable/circular_text_view"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@android:color/white"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/unseen_public_poll"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignEnd="@+id/imgChat"
+                android:layout_alignRight="@+id/imgChat"
+                android:layout_alignTop="@+id/imgChat"
+                android:background="@drawable/circular_text_view"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="2"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

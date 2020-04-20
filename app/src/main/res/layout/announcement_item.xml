@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:padding="5dp"
+    android:layout_margin="5dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.techuva.councellorapp.contusfly_corporate.views.CircularImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/abc_user_placeholder"
+            android:layout_alignBottom="@+id/timeShare"
+            android:layout_alignParentBottom="@+id/imgTime"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/imgProfile"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Pepsi"
+            android:lines="2"
+            android:minLines="1"
+            android:textColor="@color/blue_color"
+            android:textSize="@dimen/activity_textSize_small" />
+
+        <TextView
+            android:id="@+id/txtPostedOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtName"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/imgTime"
+            android:layout_toRightOf="@+id/imgTime"
+            android:text="@string/posted_on"
+            android:textColor="@color/color_black_heading"
+            android:textStyle="bold"
+            android:textSize="@dimen/activity_textSize_extra_small"/>
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtName"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/txtPostedOn"
+            android:text="11 mins ago"
+            android:textColor="@color/color_black_heading"
+            android:textStyle="bold"
+            android:textSize="@dimen/activity_textSize_extra_small"/>
+
+        <ImageView
+            android:id="@+id/imgTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtTime"
+            android:layout_alignLeft="@+id/txtName"
+            android:layout_alignStart="@+id/txtName"
+            android:layout_below="@+id/txtName"
+            android:src="@drawable/ic_calendar" />
+
+        <ImageView
+            android:id="@+id/imgCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtTime"
+            android:layout_alignTop="@+id/txtTime"
+            android:layout_marginLeft="10dp"
+            android:visibility="invisible"
+            android:layout_toEndOf="@+id/txtTime"
+            android:layout_toRightOf="@+id/txtTime"
+            android:src="@drawable/ic_category" />
+
+        <TextView
+            android:id="@+id/txtCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtTime"
+            android:layout_alignParentEnd="true"
+            android:visibility="invisible"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/imgCategory"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/imgCategory"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Mobiles"
+            android:textColor="@color/color_black_heading"
+            android:textStyle="bold"
+            android:textSize="@dimen/activity_textSize_extra_small" />
+
+
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/margin_five"
+        android:layout_marginRight="@dimen/margin_five">
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/activity_textSize_small"
+            android:layout_marginTop="@dimen/margin_five"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            tools:ignore="RtlHardcoded"
+            android:layout_gravity="center_vertical|end" />
+
+        <ImageView
+            android:id="@+id/singleOption"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="fitCenter"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:contentDescription="@string/app_name" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtLike2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imgComments"
+                android:layout_toLeftOf="@+id/imgComments"
+                android:layout_toStartOf="@+id/imgComments"
+                android:background="@drawable/click_background"
+                android:padding="5dp"
+                android:text="123"
+                android:textColor="@color/helvetica_light_greycolor"
+                android:textSize="@dimen/activity_textSize_small" />
+
+            <CheckBox
+                android:id="@+id/unLikeDislike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/txtLike2"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/txtLike2"
+                android:button="@drawable/checkbox_selector"
+                android:padding="5dp" />
+
+            <TextView
+                android:id="@+id/txtCommentsCounts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/click_background"
+                android:drawableLeft="@drawable/ic_comments"
+                android:drawablePadding="10dp"
+                android:padding="5dp"
+                android:text="72"
+                android:textColor="@color/helvetica_light_greycolor"
+                android:textSize="@dimen/activity_textSize_small" />
+
+            <ImageView
+                android:id="@+id/imgComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/txtCommentsCounts"
+                android:layout_alignTop="@+id/txtCommentsCounts"
+                android:layout_marginLeft="20dp"
+                android:layout_toLeftOf="@+id/txtCommentsCounts"
+                android:layout_toStartOf="@+id/txtCommentsCounts"
+                android:src="@drawable/ic_comments"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/txtParticcipation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:drawablePadding="5dp"
+                android:padding="5dp"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

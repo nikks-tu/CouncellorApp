@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+
+    android:gravity="center_vertical">
+
+    <com.techuva.councellorapp.contus_Corporate.views.FontableTextview
+        android:id="@+id/tv_title"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:gravity="right"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="Sample"
+        android:textColor="@color/grey_color"
+        android:textSize="@dimen/activity_naviggationdrawer_size" />
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_title"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/tv_title"
+        android:layout_toRightOf="@+id/tv_title"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="4dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/activity_reside_menu_item_marginleft"
+        android:layout_marginStart="@dimen/activity_reside_menu_item_marginleft"
+        android:layout_toEndOf="@+id/iv_icon"
+        android:layout_toRightOf="@+id/iv_icon"
+        android:background="@color/blue_color"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="4dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/blue_color"
+        android:visibility="invisible" />
+</RelativeLayout>

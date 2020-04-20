@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        targetSdkVersion 29
+        minSdkVersion 18
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation files('libs/smack-core-4.1.4.jar')
+    implementation files('libs/smack-android-4.1.4.jar')
+    implementation files('libs/smack-extensions-4.1.4.jar')
+    implementation files('libs/smack-im-4.1.4.jar')
+    implementation files('libs/smack-tcp-4.1.4.jar')
+    implementation files('libs/smack-sasl-provided-4.1.4.jar')
+    implementation "org.jxmpp:jxmpp-core:0.6.3"
+    implementation "org.jxmpp:jxmpp-jid:0.6.3"
+
+   /* implementation "org.igniterealtime.smack:smack-java7:4.3.0"
+    // Optional for XMPPTCPConnection
+    implementation "org.igniterealtime.smack:smack-tcp:4.3.0"
+    // Optional for XMPP-IM (RFC 6121) support (Roster, Threaded Chats, …)
+    implementation "org.igniterealtime.smack:smack-im:4.3.0"
+    // Optional for XMPP extensions support
+    implementation "org.igniterealtime.smack:smack-extensions:4.3.0"*/
+
+
+
+
+}

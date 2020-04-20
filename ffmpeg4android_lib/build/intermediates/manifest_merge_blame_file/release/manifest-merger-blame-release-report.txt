@@ -1,0 +1,20 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.netcompss.ffmpeg4android"
+4    android:versionCode="252324"
+5    android:versionName="25.23.24" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="18"
+8-->/home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->/home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+11-->/home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml:7:5-81
+11-->/home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml:7:22-78
+12    <uses-permission android:name="android.permission.WAKE_LOCK" />
+12-->/home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml:8:5-68
+12-->/home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml:8:22-65
+13
+14</manifest>

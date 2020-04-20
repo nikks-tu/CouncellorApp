@@ -1,0 +1,595 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.techuva.councellorapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <!--
+     Creates a custom permission so only this app can receive its messages.
+
+     NOTE: the permission *must* be called PACKAGE.permission.C2D_MESSAGE,
+           where PACKAGE is the application's package name.
+    -->
+    <uses-permission
+        android:name="android.permission.INTERACT_ACROSS_USERS_FULL"
+        android:protectionLevel="signature"
+        tools:ignore="ProtectedPermissions" />
+
+    <permission
+        android:name="com.techuva.polls_corporate.polls.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.polls.polls.permission.C2D_MESSAGE" /> <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <application
+        android:allowBackup="false"
+        android:clearTaskOnLaunch="true"
+        android:fullBackupOnly="false"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon_round"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/MyTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="icon, label, android:allowBackup"
+        tools:targetApi="m"
+        android:name=".contus_Corporate.MApplication">
+
+
+        <receiver
+            android:name="com.google.android.gms.analytics.AnalyticsReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.google.android.gms.analytics.AnalyticsService"
+            android:enabled="true"
+            android:exported="false" />
+        <!--
+             Optionally, register CampaignTrackingReceiver and CampaignTrackingService to enable
+             installation campaign reporting
+        -->
+        <receiver
+            android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.gms.analytics.globalConfigResource"
+            android:resource="@xml/global_tracker" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5233838238389564~4923604875" />
+
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.activity.SplashScreenActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.activities.ActivityChatView"
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.pollreview.PollReviewQuestionParticipation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.activity.CountryActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.search.SearchActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.privatepolls.PrivatePolls"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.privatepolls.PrivatePollLikes"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.privatepolls.PrivatePollComments"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.search.SearchPollReview"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.search.SearchPollComments"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.activity.LocationActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.residemenu.MenuActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.contus.residemenu.MenuActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.activity.Welcome"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="com.contus.activity.Welcome" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.activity.TermsAndCondition"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.contus.activity.TermsAndCondition" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.techuva.new_changes_corporate.locationapi.GooglePlacesAutocompleteActivity" />
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.campaignparticipate.CampignPollReview"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.contus.publicpoll.CampignPollReview" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.userpolls.UserPollReview"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.contus.publicpoll.UserPollReview" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.campaignparticipate.CampaignPollComments"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.contus.publicpoll.CampaignPollComments" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.comments.PollComments"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.contus.comments.PollComments" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.activity.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <action android:name="com.contus.activity.RegisterActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.activity.AccountVerification"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="com.contus.activity.AccountVerification" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.mypolls.MyPollComments"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="com.contus.mypolls.MyPollComments" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.mypolls.MyPollsReview"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="com.contus.mypolls.MyPollsReview" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.activity.PersonalInfo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="com.contus.activity.PersonalInfo" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.views.VideoLandscapeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="com.contus.Views.VideoLandscapeActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.userpolls.FullImageView"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.contus.publicpoll.FullImageView" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.likes.PollLikes"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.contus.likes.Likes" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.publicpoll.CampaignLikes"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.contus.publicpoll.CampaignLikes" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.publicpoll.CampaignComments"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.contus.publicpoll.CampaignComments" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.participation.Participation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.contus.participation.Participation" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.campaignparticipate.Participate"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.contus.publicpoll.Participate" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.createpoll.MultipleOptions"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <action android:name="com.contus.createpoll.MutltipleOptions" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.createpoll.PhotoComparison"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <action android:name="com.techuva.councellorapp.contus.createpoll.PhotoComaparison" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.createpoll.YesOrNo"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden">
+            <intent-filter>
+                <action android:name="com.contus.createpoll.YesOrNo" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.createpoll.GroupDisplay"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.techuva.councellorapp.contus_Corporate.myprofile.EditProfile"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="com.contus.myprofile.EditProfile" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.activities.ActivityImageView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.activities.ActivitySelectContact"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.activities.ActivityNewGroup"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.activities.ActivityCreateGroup"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contusfly_corporate.activities.ActivityCommonEditor"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.activities.ActivityGroupInfo"
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.activities.ActivityAddRoster"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.activities.ActivityShareMsg"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.activities.ActivityUserProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.activities.ActivityMapView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.createpoll.CreatePollOptions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.activities.ImagePreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.activities.ActivityMessageInfo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.activities.ActivityPickContact"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.activities.ActivitySelectMapView"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.techuva.councellorapp.contusfly_corporate.createpoll.ContactDisplay"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity android:name="eu.janmuller.android.simplecropimage.CropImage" />
+
+        <receiver android:name="com.techuva.councellorapp.contusfly_corporate.NetworkStateReceiver">
+            <intent-filter>
+                <action
+                    android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                    tools:ignore="BatteryLife" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <service
+            android:name="com.techuva.councellorapp.contusfly_corporate.service.ChatService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.contus.service.action.CONNECT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.google.android.gcm.GCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            tools:ignore="UsingC2DM">
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.polls.polls" />
+            </intent-filter>
+        </receiver> <!-- SMS Receiver -->
+        <receiver
+            android:name="com.techuva.councellorapp.contus_Corporate.smsreciver.SmsReceiver"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter android:priority="99999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.techuva.polls_corporate.polls.GCMIntentService"
+            android:enabled="true" />
+        <!--
+            <provider
+            android:name="com.aviary.android.feather.sdk.internal.cds.AviaryCdsProvider"
+            android:authorities="com.polls.polls.AviaryCdsProvider"
+            android:exported="false"
+            android:process=":aviary_cds" />
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBuNhiVlTvGujzDCx_cCFacTsWa6Mf2xNg" />
+        <meta-data
+            android:name="android.app.searchable"
+            android:resource="@xml/searchable" />
+
+        <service
+            android:name=".contusfly_corporate.service.FirebaseMessagingService"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".contusfly_corporate.service.FirebaseInstanceIDService"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+    <activity
+            android:name="com.new_chanages.Rewards_Activty"
+            android:label="Rewards"
+            android:theme="@style/MyTheme" />
+        -->
+        <activity android:name="com.techuva.new_changes_corporate.AnnouncementLikes_actvty" />
+        <activity
+            android:name="com.techuva.new_changes_corporate.Announcement_comments_Act"
+            android:label="@string/title_activity_announcement_comments_"
+            android:theme="@style/MyTheme" />
+        <activity android:name="com.techuva.new_changes_corporate.SignUpActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.techuva.councellorapp.contusfly_corporate.createpoll.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <!-- ressource file to create -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+    </application>
+
+
+
+
+
+</manifest>

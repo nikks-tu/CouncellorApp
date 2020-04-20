@@ -1,0 +1,45 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:1-11:12
+INJECTED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:1-11:12
+INJECTED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:1-11:12
+INJECTED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:1-11:12
+INJECTED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:1-11:12
+INJECTED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:1-11:12
+INJECTED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:1-11:12
+	package
+		ADDED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml:3:5-43
+		INJECTED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml
+		INJECTED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml:5:5-35
+		INJECTED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml
+		INJECTED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml:4:5-33
+		INJECTED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml
+		INJECTED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml:7:22-78
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml:8:5-68
+	android:name
+		ADDED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml:8:22-65
+uses-sdk
+INJECTED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml
+INJECTED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml
+INJECTED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml
+INJECTED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml
+		ADDED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml
+		INJECTED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml
+		ADDED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml
+		INJECTED from /home/techuva/Documents/Nikita_workspace/CouncellorApp/ffmpeg4android_lib/src/main/AndroidManifest.xml
